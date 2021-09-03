@@ -1,44 +1,49 @@
-// @import url('../../styles/_global.scss');
-
 * {
   overflow: hidden;
 }
 
-.bg {
-  position: absolute;
-  background-color: #FFEC44;
+h1, span {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.bg_texts {
-  color: #976D00;
+.marquee_container {
+  position: relative;
+  height: 4.5rem;
+}
+
+.marquee {
   opacity: 5%;
-  font-size: x-large;
-  width: 100%;
+  margin: 0 auto;
   white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
 
-  .neg {
-    animation: animateNeg 120s linear infinite;
-  }
-  .pos {
-    animation: animatePos 120s linear infinite;
-  }
+// TODO: Figure out how to make text scroll LTR
+.marquee span {
+  display: inline-block;
+  // padding-right: 100%;
+  padding-left: 100%;
+  animation: marquee 60s linear infinite;
+  margin-right: .5em;
+}
 
-  @keyframes animatePos {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(+100%);
-    }
-  }
+.marquee2 span {
+  animation-delay: -30s;
+}
 
-  @keyframes animateNeg {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+@keyframes marquee {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+    // transform: translate(+100%, 0);
   }
 }
 
