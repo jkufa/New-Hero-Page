@@ -1,0 +1,44 @@
+// @import url('../../styles/_global.scss');
+
+* {
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  background-color: #FFEC44;
+}
+
+.bg_texts {
+  color: #976D00;
+  opacity: 5%;
+  font-size: x-large;
+  width: 100%;
+  white-space: nowrap;
+
+  .neg {
+    animation: animateNeg 120s linear infinite;
+  }
+  .pos {
+    animation: animatePos 120s linear infinite;
+  }
+
+  @keyframes animatePos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(+100%);
+    }
+  }
+
+  @keyframes animateNeg {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
