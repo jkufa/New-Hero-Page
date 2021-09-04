@@ -20,10 +20,10 @@ const Background: FC<Props> = (Props) => {
           return (
           <div className={`${styles.marquee_container}`}>
             <h1 className={`${styles.marquee}`}>
-              <span>{ cols }</span> 
+              <span className={`${i ? styles.rtl : styles.ltr}`}>{ cols }</span> 
             </h1>
             <h1 className={`${styles.marquee} ${styles.marquee2}`}>
-              <span>{ cols }</span> 
+              <span className={`${i ? styles.rtl : styles.ltr}`}>{ cols }</span> 
             </h1>
           </div>)
         })
