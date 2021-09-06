@@ -48,14 +48,20 @@
 }
 
 @keyframes bounce1 {
-    0%, 70%, 100% {
+    0%, 100% {
       -webkit-transform: translate(-13rem, 0);
       transform: translate(-13rem, 0);
     }
   
-    50% {
-      -webkit-transform: translate(-13rem, -2rem);
-      transform: translate(-13rem, -2rem);
+    40% {
+      -webkit-transform: translate(-13rem, -1.5rem);
+      transform: translate(-13rem, -1.5rem);
+    }
+
+    60% {
+      -webkit-transform: translate(-13rem, .5rem);
+      transform: translate(-13rem, .5rem);
+
     }
   
     80% {
@@ -65,16 +71,22 @@
   }
 
   @keyframes bounce2 {
-    0%, 70%, 100% {
+    0%, 100% {
       -webkit-transform: translate(13rem, 0);
       transform: translate(13rem, 0);
     }
   
-    50% {
-      -webkit-transform: translate(13rem, -2rem);
-      transform: translate(13rem, -2rem);
+    40% {
+      -webkit-transform: translate(13rem, -1.5rem);
+      transform: translate(13rem, -1.5rem);
     }
   
+    60% {
+        -webkit-transform: translate(13rem, .5rem);
+        transform: translate(13rem, .5rem);
+  
+      }
+
     80% {
       -webkit-transform: translate(13rem, -.25rem);
       transform: translate(13rem, -.25rem);
