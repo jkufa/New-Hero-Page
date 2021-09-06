@@ -1,13 +1,16 @@
+@import '../../styles/abstracts/colors';
+
 * {
   overflow: hidden;
 }
 
 .bg {
-  background-color: #fefefe;
+  background-color: $yellow-primary;
   z-index: -1;
 }
 
 h1, span {
+  font-weight: 700;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
