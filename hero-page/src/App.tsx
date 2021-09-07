@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Background from './components/background/Background';
 // import Button from './components/button/Button';
 import './styles/App.scss';
-import line from './images/svgs/hero-line2.svg';
 
 function App() {
   const [fadingIn, setFadeIn] = useState<boolean>(true);
