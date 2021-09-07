@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import styles from './Background.module.scss';
 
-const ROWS_SIZE = 20
-const COLS_SIZE = 15;
+const ROWS_SIZE = 15;
+const COLS_SIZE = 18;
 
 interface Props {
   bgText: string;

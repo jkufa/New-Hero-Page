@@ -1,4 +1,7 @@
 @import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/animations';
+
+
 
 .bg {
   background-color: $yellow-primary;
@@ -7,6 +10,7 @@
 
 h1, span {
   font-weight: 700;
+  font-size: MAX(1rem,2vw);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -17,7 +21,7 @@ h1, span {
 
 .marquee_container {
   position: relative;
-  height: 4.5rem;
+  height: 8rem;
 }
 
 // TODO: Figure out how to make text scroll LTR
@@ -48,22 +52,3 @@ h1, span {
     }
   }
 }
-
-@keyframes animateLTR {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-
-@keyframes animateRTL {
-  0% {
-    transform: translate(-100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
