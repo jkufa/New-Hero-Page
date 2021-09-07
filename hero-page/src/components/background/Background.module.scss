@@ -5,7 +5,6 @@
 
 .bg {
   background-color: $yellow-primary;
-  z-index: -1;
 }
 
 h1, span {
@@ -17,6 +16,7 @@ h1, span {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color: $dark-primary;
 }
 
 .marquee_container {

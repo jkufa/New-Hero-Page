@@ -37,7 +37,7 @@
   }
 }
 
-@mixin fadeIn($name,$x) {
+@mixin fadeIn($name, $x, $y) {
   @keyframes #{$name} {
     0% {
       -webkit-transform: translate(0, 0);
@@ -50,8 +50,8 @@
       opacity: 0;
     }
     100% {
-      -webkit-transform: translate($x, 0);
-      transform: translate($x, 0);
+      -webkit-transform: translate($x, $y);
+      transform: translate($x, $y);
       opacity: 1;
     }
   }
