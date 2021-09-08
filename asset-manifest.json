@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/New-Hero-Page/static/css/main.5f054875.chunk.css",
+    "main.js": "/New-Hero-Page/static/js/main.006e1b07.chunk.js",
+    "main.js.map": "/New-Hero-Page/static/js/main.006e1b07.chunk.js.map",
+    "runtime-main.js": "/New-Hero-Page/static/js/runtime-main.832f3458.js",
+    "runtime-main.js.map": "/New-Hero-Page/static/js/runtime-main.832f3458.js.map",
+    "static/js/2.1a441fc3.chunk.js": "/New-Hero-Page/static/js/2.1a441fc3.chunk.js",
+    "static/js/2.1a441fc3.chunk.js.map": "/New-Hero-Page/static/js/2.1a441fc3.chunk.js.map",
+    "static/js/3.c45546d5.chunk.js": "/New-Hero-Page/static/js/3.c45546d5.chunk.js",
+    "static/js/3.c45546d5.chunk.js.map": "/New-Hero-Page/static/js/3.c45546d5.chunk.js.map",
+    "index.html": "/New-Hero-Page/index.html",
+    "static/css/main.5f054875.chunk.css.map": "/New-Hero-Page/static/css/main.5f054875.chunk.css.map",
+    "static/js/2.1a441fc3.chunk.js.LICENSE.txt": "/New-Hero-Page/static/js/2.1a441fc3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.832f3458.js",
+    "static/js/2.1a441fc3.chunk.js",
+    "static/css/main.5f054875.chunk.css",
+    "static/js/main.006e1b07.chunk.js"
+  ]
+}
