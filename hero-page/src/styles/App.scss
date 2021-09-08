@@ -5,7 +5,7 @@
 
 .App {
   min-height: 100vh;
-  .name-container {
+  .content-container {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -133,13 +133,7 @@
       }
     }
   }
-  .line-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-  }
-
+  
   .bg-container {
       overflow: hidden;
       z-index: -2;

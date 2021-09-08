@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Background from './components/background/Background';
-// import Button from './components/button/Button';
+import Button from './components/button/Button';
 import './styles/App.scss';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="name-container"
+      <div className="content-container"
            onAnimationEnd={() => setFadeIn(() => false)}
       >
         <h1 
@@ -37,6 +37,13 @@ function App() {
         >
           KUFA
         </h1>
+      <div className="btns-container">
+        <Button text={"skills"}></Button>
+        <Button text={"experience"}></Button>
+        <Button text={"projects"}></Button>
+        <Button text={"about"}></Button>
+        <Button text={"resume"}></Button>
+      </div>
       </div>
       <div className="bg-container">
        <Background bgText={'jackkufa'} ></Background>

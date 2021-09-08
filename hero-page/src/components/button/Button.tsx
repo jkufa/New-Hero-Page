@@ -1,12 +1,18 @@
 import { FC } from 'react';
-import './Button.module.scss';
+import styles from './Button.module.scss';
 
-const Button: FC<any> = () => {
+interface Props {
+  text: string;
+}
+
+const Button: FC<Props> = (Props) => {
   // Build bg text
   return (
-    <div>
-      Yo
-    </div>
+    <div className={`${styles.btn_container}`}>
+      <button type="button" className={`${styles.btn}`}>
+        { Props.text.toUpperCase() }
+      </button> 
+  </div>
   );
 }
 
