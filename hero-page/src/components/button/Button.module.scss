@@ -27,7 +27,11 @@
       border-radius: 50px;
   }
 
-    &:hover,&:active   {
+  &:focus {
+    outline: $light-primary solid;
+  }
+
+    &:hover,&:active,&:focus   {
       background-color: darken($light-primary, 8%);
       filter: drop-shadow(0 .1em 0 $dark-primary);
       transform: translate(0, .2em);
