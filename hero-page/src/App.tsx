@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Background from './components/background/Background';
-// import Button from './components/button/Button';
+import Button from './components/button/Button';
+import ProfessionalTitle from './components/professional-title/ProfessionalTitle';
 import './styles/App.scss';
 
 function App() {
@@ -10,9 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="name-container"
+      <div className="content-container"
            onAnimationEnd={() => setFadeIn(() => false)}
       >
+      <div className="title-container">
         <h1 
           onMouseEnter={() => setFirstNameBounce(() => true)}
           onTouchStartCapture={() => setFirstNameBounce(() => true)}
@@ -37,6 +39,21 @@ function App() {
         >
           KUFA
         </h1>
+        <div className={`
+                        pro-title
+                        ${fadingIn ? 'fadeIn' : ''}
+                        `}
+        >
+          <ProfessionalTitle text={'Front-End Software Engineer'} ></ProfessionalTitle>
+        </div>
+      </div>
+      <div className="btns-container">
+        <Button text={"skills"}></Button>
+        <Button text={"experience"}></Button>
+        <Button text={"projects"}></Button>
+        <Button text={"about"}></Button>
+        <Button text={"resume"}></Button>
+      </div>
       </div>
       <div className="bg-container">
        <Background bgText={'jackkufa'} ></Background>

@@ -1,0 +1,39 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/animations';
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+.txt_container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  p.txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: $light-primary;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: $dark-primary;
+    width: 16em;
+    height: 2em;
+    @include tablet {
+      font-size: 1.25rem;
+      width: 20em;
+      height: 2em;
+    }
+    @include desktop {
+      font-size: 1.5rem;
+    }
+    @include desktop-l {
+      font-size: 2rem;
+    }
+    @include desktop-xl {
+      font-size: 2.25rem;
+      width: 30em;
+    }
+  }
+}
