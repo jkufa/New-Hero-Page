@@ -10,6 +10,8 @@ $marquee-height-mobile: 5rem;
 $mobile-translate-x: 0;
 $mobile-translate-y: .4em;
 
+$mobile-btn-size: 1.25rem;
+
 
 
 // ============ //
@@ -23,14 +25,18 @@ $marquee-height-tablet: 5rem;
 $tablet-translate-x: 1.05em;
 
 
+
 // ============ //
 //   DESKTOP    //
 // ============ //
 $h1-desktop-size: 10rem;
+$desktop-btn-size: 1.75rem;
 $bg-desktop-size: 2.5rem;
 
 $marquee-height-desktop: 6rem;
 $desktop-translate-x: 1.05em;
+
+$btn-width-desktop: 10em;
 
 
 // ============ //
