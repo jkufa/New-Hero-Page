@@ -1,0 +1,28 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/animations';
+
+.btn_container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: .3rem 0;
+  button.btn {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: $light-primary;
+    width: 99vw;
+    height: 3rem;
+    border-radius: 25px;
+    border: .2em solid $dark-primary;
+    filter: drop-shadow(0 .25em 0 $dark-primary);
+    transform: translate(0, 0);
+    transition: all 500ms 100ms;
+    &:hover,&:active   {
+      background-color: darken($light-primary, 8%);
+      filter: drop-shadow(0 .1em 0 $dark-primary);
+      transform: translate(0, .2em);
+      transition: all 500ms;
+    }
+  }
+}
