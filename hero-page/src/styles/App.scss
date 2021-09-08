@@ -8,12 +8,29 @@
   .content-container {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr .5fr;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    .title-container {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      .pro-title {
+        margin-top: 2rem;
+        @include tablet {
+          margin-top: .2rem;
+        }
+        ProfessionalTitle {
+          @include fadeIn(fadeIn-pro-title,0,0);
+        }
+      }
+    }
+
     h1 {
         margin: 0;
         font-size: $h1-mobile-size;
+        height: $h1-mobile-size;
         font-weight: 900;
         color: $dark-primary;
         grid-column: 1;
@@ -23,15 +40,19 @@
         -webkit-text-stroke: .03em;
         @include tablet {
           font-size: $h1-tablet-size;
+          height: $h1-tablet-size;
         }
         @include desktop {
           font-size: $h1-desktop-size;
+          height: $h1-desktop-size;
         }
         @include desktop-l {
           font-size: $h1-desktop-l-size;
+          height: $h1-desktop-l-size;
         }
         @include desktop-xl {
           font-size: $h1-desktop-xl-size;
+          height: $h1-desktop-xl-size;
         }
     }
     h1.firstName {
