@@ -1,6 +1,7 @@
 @import '../styles/abstracts/colors';
 @import '../styles/abstracts/animations';
-@import '../styles/abstracts/typography';
+@import '../styles/abstracts/mixins';
+@import '../styles/abstracts/variables';
 
 .App {
   min-height: 100vh;
@@ -20,6 +21,18 @@
         align-self: center;
         justify-self: center;
         -webkit-text-stroke: .03em;
+        @include tablet {
+          font-size: $h1-tablet-size;
+        }
+        @include desktop {
+          font-size: $h1-desktop-size;
+        }
+        @include desktop-l {
+          font-size: $h1-desktop-l-size;
+        }
+        @include desktop-xl {
+          font-size: $h1-desktop-xl-size;
+        }
     }
     h1.firstName {
       z-index: 2;
@@ -29,10 +42,46 @@
       &.fadeIn {
         @include fadeIn(fadeIn-1,-$mobile-translate-x,-$mobile-translate-y);
         animation: 1000ms ease-in-out fadeIn-1;
+        @include tablet {
+          @include fadeIn(fadeIn-1,-$tablet-translate-x, 0);
+        }
+        @include desktop {
+          @include fadeIn(fadeIn-1,-$desktop-translate-x, 0);
+        }
+        @include desktop-l {
+          @include fadeIn(fadeIn-1,-$desktop-l-translate-x, 0);
+        }
+        @include desktop-xl {
+          @include fadeIn(fadeIn-1,-$desktop-xl-translate-x, 0);
+        }
       }
       &.bouncing {
         @include bounce(bounce-1,-$mobile-translate-x,-$mobile-translate-y);
         animation: 1000ms bounce-1 100ms;
+        @include tablet {
+          @include bounce(bounce-1, -$tablet-translate-x, 0);
+        }
+        @include desktop {
+          @include bounce(bounce-1, -$desktop-translate-x, 0);
+        }
+        @include desktop-l {
+          @include bounce(bounce-1, -$desktop-l-translate-x, 0);
+        }
+        @include desktop-xl {
+          @include bounce(bounce-1, -$desktop-xl-translate-x, 0);
+        }
+      }
+      @include tablet {
+        transform: translate(-$tablet-translate-x, 0);
+      }
+      @include desktop {
+        transform: translate(-$desktop-translate-x, 0);
+      }
+      @include desktop-l {
+        transform: translate(-$desktop-l-translate-x, 0);
+      }
+      @include desktop-xl {
+        transform: translate(-$desktop-xl-translate-x, 0);
       }
     }
     h1.lastName {
@@ -41,10 +90,46 @@
       &.fadeIn {
         @include fadeIn(fadeIn-2,$mobile-translate-x, $mobile-translate-y);
         animation: 1000ms ease-in-out fadeIn-2;
+        @include tablet {
+          @include fadeIn(fadeIn-2,$tablet-translate-x, 0);
+        }
+        @include desktop {
+          @include fadeIn(fadeIn-2,$desktop-translate-x, 0);
+        }
+        @include desktop-l {
+          @include fadeIn(fadeIn-2,$desktop-l-translate-x, 0);
+        }
+        @include desktop-xl {
+          @include fadeIn(fadeIn-2,$desktop-xl-translate-x, 0);
+        }
       }
       &.bouncing {
         @include bounce(bounce-2, $mobile-translate-x,$mobile-translate-y);
         animation: 1000ms bounce-2 100ms;
+        @include tablet {
+          @include bounce(bounce-2, $tablet-translate-x, 0);
+        }
+        @include desktop {
+          @include bounce(bounce-2, $desktop-translate-x, 0);
+        }
+        @include desktop-l {
+          @include bounce(bounce-2, $desktop-l-translate-x, 0);
+        }
+        @include desktop-xl {
+          @include bounce(bounce-2, $desktop-xl-translate-x, 0);
+        }
+      }
+      @include tablet {
+        transform: translate($tablet-translate-x, 0);
+      }
+      @include desktop {
+        transform: translate($desktop-translate-x, 0);
+      }
+      @include desktop-l {
+        transform: translate($desktop-l-translate-x, 0);
+      }
+      @include desktop-xl {
+        transform: translate($desktop-xl-translate-x, 0);
       }
     }
   }

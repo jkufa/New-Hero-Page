@@ -16,6 +16,9 @@
   }
 }
 
+$translate-y-40: .15em;
+$translate-y-60: .05em;
+$translate-y-80: .015em;
 @mixin bounce($name,$x, $y) {
   @keyframes #{$name} {
     0%, 100% {
@@ -23,16 +26,19 @@
       transform: translate($x, $y);
     }
     40% {
-      -webkit-transform: translate($x, CALC(-1.5rem + $y));
-      transform: translate($x, CALC($y - 1.5rem));
+      -webkit-transform: translate($x, CALC($y - $translate-y-40));
+      // transform: translate($x, CALC($y - 1.5rem));
+      transform: translate($x, CALC($y - $translate-y-40));
     }
     60% {
-      -webkit-transform: translate($x, CALC($y + .5rem));
-      transform: translate($x, CALC($y + .5rem));
+      -webkit-transform: translate($x, CALC($y - $translate-y-60));
+      // transform: translate($x, CALC($y + .5rem));
+      transform: translate($x, CALC($y + $translate-y-60));
     }
     80% {
-      -webkit-transform: translate($x, CALC($y - .25rem));
-      transform: translate($x, CALC($y - .25rem));
+      -webkit-transform: translate($x, CALC($y - $translate-y-80));
+      // transform: translate($x, CALC($y - .25rem));
+      transform: translate($x, CALC($y - $translate-y-80));
     }
   }
 }

@@ -1,10 +1,7 @@
 @import '../../styles/abstracts/colors';
 @import '../../styles/abstracts/animations';
-@import '../../styles/abstracts/typography';
-
-$marquee-height-mobile: 5rem;
-$marquee-height-desktop: 8rem;
-
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
 
 .bg {
   background-color: $yellow-primary;
@@ -24,10 +21,37 @@ h1, span {
 
 .marquee_container {
   position: relative;
+  text-align: center;
   height: $marquee-height-mobile;
   line-height: $marquee-height-mobile;
-  font-size: $bg-mobile-size;
-  text-align: center;
+  @include tablet {
+    height: $marquee-height-tablet;
+    line-height: $marquee-height-tablet;
+    h1,span {
+      font-size: $bg-tablet-size;
+    }
+  }  
+  @include desktop {
+    height: $marquee-height-desktop;
+    line-height: $marquee-height-desktop;
+    h1,span {
+      font-size: $bg-desktop-size;
+    }
+  }
+  @include desktop-l {
+    height: $marquee-height-desktop-l;
+    line-height: $marquee-height-desktop-l;
+    h1,span {
+      font-size: $bg-desktop-l-size;
+    }
+  }
+  @include desktop-xl {
+    height: $marquee-height-desktop-xl;
+    line-height: $marquee-height-desktop-xl;
+    h1,span {
+      font-size: $bg-desktop-xl-size;
+    }
+  }
 }
 
 // TODO: Figure out how to make text scroll LTR
