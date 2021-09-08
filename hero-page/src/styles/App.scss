@@ -1,6 +1,6 @@
 @import '../styles/abstracts/colors';
 @import '../styles/abstracts/animations';
-@import '../styles/abstracts/svgs';
+@import '../styles/abstracts/typography';
 
 .App {
   min-height: 100vh;
@@ -12,38 +12,38 @@
     height: 100vh;
     h1 {
         margin: 0;
-        font-size: 200px;
+        font-size: $h1-mobile-size;
         font-weight: 900;
         color: $dark-primary;
         grid-column: 1;
         grid-row: 1;
         align-self: center;
         justify-self: center;
-        -webkit-text-stroke: 5px;
+        -webkit-text-stroke: .03em;
     }
     h1.firstName {
       z-index: 2;
-      transform: translateX(-13rem);
+      transform: translate(-$mobile-translate-x,-$mobile-translate-y);
       color: $yellow-primary;
       -webkit-text-stroke-color: $dark-primary;
       &.fadeIn {
-        @include fadeIn(fadeIn-1,-13rem,0);
+        @include fadeIn(fadeIn-1,-$mobile-translate-x,-$mobile-translate-y);
         animation: 1000ms ease-in-out fadeIn-1;
       }
       &.bouncing {
-        @include bounce(bounce-1,-13rem);
+        @include bounce(bounce-1,-$mobile-translate-x,-$mobile-translate-y);
         animation: 1000ms bounce-1 100ms;
       }
     }
     h1.lastName {
       z-index: 1;
-      transform: translateX(13rem);
+      transform: translate($mobile-translate-x, $mobile-translate-y);
       &.fadeIn {
-        @include fadeIn(fadeIn-2,13rem,0);
+        @include fadeIn(fadeIn-2,$mobile-translate-x, $mobile-translate-y);
         animation: 1000ms ease-in-out fadeIn-2;
       }
       &.bouncing {
-        @include bounce(bounce-2, 13rem);
+        @include bounce(bounce-2, $mobile-translate-x,$mobile-translate-y);
         animation: 1000ms bounce-2 100ms;
       }
     }

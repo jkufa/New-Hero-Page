@@ -1,6 +1,9 @@
 @import '../../styles/abstracts/colors';
 @import '../../styles/abstracts/animations';
+@import '../../styles/abstracts/typography';
 
+$marquee-height-mobile: 5rem;
+$marquee-height-desktop: 8rem;
 
 
 .bg {
@@ -9,7 +12,7 @@
 
 h1, span {
   font-weight: 700;
-  font-size: MAX(1rem,2vw);
+  font-size: $bg-mobile-size;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -21,7 +24,10 @@ h1, span {
 
 .marquee_container {
   position: relative;
-  height: 8rem;
+  height: $marquee-height-mobile;
+  line-height: $marquee-height-mobile;
+  font-size: $bg-mobile-size;
+  text-align: center;
 }
 
 // TODO: Figure out how to make text scroll LTR

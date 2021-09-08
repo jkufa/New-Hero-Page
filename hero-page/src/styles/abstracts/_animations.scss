@@ -16,23 +16,23 @@
   }
 }
 
-@mixin bounce($name,$x) {
+@mixin bounce($name,$x, $y) {
   @keyframes #{$name} {
     0%, 100% {
-      -webkit-transform: translate($x, 0);
-      transform: translate($x, 0);
+      -webkit-transform: translate($x, $y);
+      transform: translate($x, $y);
     }
     40% {
-      -webkit-transform: translate($x, -1.5rem);
-      transform: translate($x, -1.5rem);
+      -webkit-transform: translate($x, CALC(-1.5rem + $y));
+      transform: translate($x, CALC($y - 1.5rem));
     }
     60% {
-      -webkit-transform: translate($x, .5rem);
-      transform: translate($x, .5rem);
+      -webkit-transform: translate($x, CALC($y + .5rem));
+      transform: translate($x, CALC($y + .5rem));
     }
     80% {
-      -webkit-transform: translate($x, -.25rem);
-      transform: translate($x, -.25rem);
+      -webkit-transform: translate($x, CALC($y - .25rem));
+      transform: translate($x, CALC($y - .25rem));
     }
   }
 }

@@ -27,7 +27,7 @@ function App() {
         </h1>
         <h1
           onMouseEnter={() => setLastNameBounce(() => true)}
-          onTouchStartCapture={() => setFirstNameBounce(() => true)}
+          onTouchStartCapture={() => setLastNameBounce(() => true)}
           onAnimationEnd={() => setLastNameBounce(() => false)} 
           className={`
                      lastName 
