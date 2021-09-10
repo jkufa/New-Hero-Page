@@ -1,24 +1,33 @@
-import React, { FC } from 'react';
+import React, { FC, useContext, useState } from 'react';
+import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
+import'./Background.scss';
 
-const ROWS_SIZE = 15;
-const COLS_SIZE = 15;
+const ROWS_SIZE: number = 15;
+const COLS_SIZE: number = 15;
+const STR_LEN: number = 8;
 
 interface Props {
   bgText: string;
 }
 
-const Background: FC<Props> = (Props) => {
+const Background: FC<Props> = () => {
+  const  { bgText } = useContext(BackgroundContext);
+  const [fadingIn, setFadeIn] = useState<boolean>(true);
+
+  let hasTransitioned: boolean = false;
+  let i: number = 0;
   // Build bg text
-  let i:number = 0;
-  const rows = Array(ROWS_SIZE).fill(Array(COLS_SIZE).fill(Props.bgText + " "));
+  const rows = Array(ROWS_SIZE).fill(Array(COLS_SIZE).fill(bgText + " "));
   return (
-    <div className={styles.bg}>
+    <div className={`${fadingIn ? styles.fadeInBg : ''} ${styles.bg}`}
+         onAnimationEnd={() => setFadeIn(() => false)}
+    >
       {
         rows.map((cols) => {
           i = 1 - i;
           return (
-          <div className={`${styles.marquee_container}`}>
+          <div className={`${!hasTransitioned ? styles.has_transitioned : styles.has_not_transitioned } ${styles.marquee_container}`}>
             <h1 className={`${styles.marquee}`}>
               <span className={`${i ? styles.rtl : styles.ltr}`}>{ cols }</span> 
             </h1>

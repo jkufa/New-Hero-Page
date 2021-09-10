@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import Background from './components/background/Background';
 import Button from './components/button/Button';
 import ProfessionalTitle from './components/professional-title/ProfessionalTitle';
-// import { BackgroundContext } from './contexts/BackgroundContext';
+import BackgroundContext from './contexts/BackgroundTextContext';
 import './styles/App.scss';
 
 
 function App() {
+  const defaultBg: string = 'jackkufa';
+
   const [fadingIn, setFadeIn] = useState<boolean>(true);
   const [bouncingFirstName, setFirstNameBounce] = useState<boolean>(false);
   const [bouncingLastName, setLastNameBounce] = useState<boolean>(false);
+  const [bgText, setBgText] = useState<string>(defaultBg);
+  const value = { bgText, setBgText };
 
   return (
     <div className="App">
+    <BackgroundContext.Provider value={ value }>
       <div className="content-container"
            onAnimationEnd={() => setFadeIn(() => false)}
       >
@@ -50,17 +55,17 @@ function App() {
         </div>
       </div>
       <div className="btns-container">
-        <Button text={"skills"}></Button>
-        <Button text={"experience"}></Button>
-        <Button text={"projects"}></Button>
-        <Button text={"about"}></Button>
-        <Button text={"resume"}></Button>
+        <Button defaultBg = { defaultBg } text={"skills"}></Button>
+        <Button defaultBg = { defaultBg } text={"experience"}></Button>
+        <Button defaultBg = { defaultBg } text={"projects"}></Button>
+        <Button defaultBg = { defaultBg } text={"about"}></Button>
+        <Button defaultBg = { defaultBg } text={"resume"}></Button>
       </div>
       </div>
       <div className="bg-container">
-       <Background bgText={'jackkufa'} ></Background>
+         <Background bgText={ bgText } ></Background>
       </div>
-      {/* BAR LINE SVG CODE */}
+    </BackgroundContext.Provider>
     </div>
   );
 }
