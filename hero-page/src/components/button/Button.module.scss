@@ -17,9 +17,9 @@
     height:2.25em;
     border-radius: 25px;
     border: .2em solid $dark-primary;
-    filter: drop-shadow(0 .25em 0 $dark-primary);
+    filter: drop-shadow(0 .3em 0 $dark-primary);
     transform: translate(0, 0);
-    transition: all 300ms 100ms;
+    transition: all 350ms 150ms;
 
     @include desktop {
       font-size: $desktop-btn-size;
@@ -32,7 +32,7 @@
   }
 
     &:hover,&:active,&:focus   {
-      background-color: darken($light-primary, 15%);
+      background-color: darken($light-primary, 20%);
       filter: drop-shadow(0 .1em 0 $dark-primary);
       transform: translate(0, .2em);
       transition: all 300ms;
