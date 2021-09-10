@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/New-Hero-Page/static/css/main.bc7bc00b.chunk.css",
-    "main.js": "/New-Hero-Page/static/js/main.89df844c.chunk.js",
-    "main.js.map": "/New-Hero-Page/static/js/main.89df844c.chunk.js.map",
+    "main.css": "/New-Hero-Page/static/css/main.9f982c25.chunk.css",
+    "main.js": "/New-Hero-Page/static/js/main.317a6b7b.chunk.js",
+    "main.js.map": "/New-Hero-Page/static/js/main.317a6b7b.chunk.js.map",
     "runtime-main.js": "/New-Hero-Page/static/js/runtime-main.6dd5d767.js",
     "runtime-main.js.map": "/New-Hero-Page/static/js/runtime-main.6dd5d767.js.map",
     "static/js/2.35aed11d.chunk.js": "/New-Hero-Page/static/js/2.35aed11d.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.38d12fc7.chunk.js": "/New-Hero-Page/static/js/3.38d12fc7.chunk.js",
     "static/js/3.38d12fc7.chunk.js.map": "/New-Hero-Page/static/js/3.38d12fc7.chunk.js.map",
     "index.html": "/New-Hero-Page/index.html",
-    "static/css/main.bc7bc00b.chunk.css.map": "/New-Hero-Page/static/css/main.bc7bc00b.chunk.css.map",
+    "static/css/main.9f982c25.chunk.css.map": "/New-Hero-Page/static/css/main.9f982c25.chunk.css.map",
     "static/js/2.35aed11d.chunk.js.LICENSE.txt": "/New-Hero-Page/static/js/2.35aed11d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6dd5d767.js",
     "static/js/2.35aed11d.chunk.js",
-    "static/css/main.bc7bc00b.chunk.css",
-    "static/js/main.89df844c.chunk.js"
+    "static/css/main.9f982c25.chunk.css",
+    "static/js/main.317a6b7b.chunk.js"
   ]
 }
