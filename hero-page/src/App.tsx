@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import Background from './components/background/Background';
 import Button from './components/button/Button';
 import ProfessionalTitle from './components/professional-title/ProfessionalTitle';
+// import { BackgroundContext } from './contexts/BackgroundContext';
 import './styles/App.scss';
+
 
 function App() {
   const [fadingIn, setFadeIn] = useState<boolean>(true);
