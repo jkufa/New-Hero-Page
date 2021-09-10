@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
+import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
 
 const ROWS_SIZE = 15;
@@ -8,10 +9,12 @@ interface Props {
   bgText: string;
 }
 
+
 const Background: FC<Props> = (Props) => {
   // Build bg text
+  const  { bgText } = useContext(BackgroundContext);
   let i:number = 0;
-  const rows = Array(ROWS_SIZE).fill(Array(COLS_SIZE).fill(Props.bgText + " "));
+  const rows = Array(ROWS_SIZE).fill(Array(COLS_SIZE).fill(bgText + " "));
   return (
     <div className={styles.bg}>
       {
