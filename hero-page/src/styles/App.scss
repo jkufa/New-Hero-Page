@@ -156,6 +156,9 @@
   }
   
   .bg-container {
+      // @include fadeIn(fadeIn-bg,0, 0);
+      // animation: 1000ms ease-in-out fadeIn-bg;
+      background-color: $yellow-primary;
       overflow: hidden;
       z-index: -2;
       inset: 0;

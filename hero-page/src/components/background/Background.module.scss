@@ -7,6 +7,11 @@
   background-color: $yellow-primary;
 }
 
+.fadeInBg {
+  @include fadeIn(fade-in-bg,0,0);
+  animation: fade-in-bg ease-in-out 1000ms;
+}
+
 h1, span {
   font-weight: 700;
   font-size: $bg-mobile-size;
@@ -18,7 +23,6 @@ h1, span {
   user-select: none;
   color: $dark-primary;
 }
-
 .marquee_container {
   position: relative;
   text-align: center;
@@ -54,12 +58,12 @@ h1, span {
   }
 }
 
-// TODO: Figure out how to make text scroll LTR
 .marquee {
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
+  
   &.marquee2 span{
     &.rtl {
       animation-delay: -120s;
@@ -69,10 +73,11 @@ h1, span {
     }
   }
   span {
-    opacity: 5%;
+    opacity: .05;
     display: inline-block;
     padding-left: 100%;
-    margin-right: .5em;
+    margin-right: 2rem;
+    word-spacing: 2rem;
     animation: animateLTR 240s linear infinite;
     &.rtl {
       animation: animateRTL 240s linear infinite;
