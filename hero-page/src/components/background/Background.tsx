@@ -1,7 +1,6 @@
 import React, { FC, useContext, useState } from 'react';
 import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
-import'./Background.scss';
 
 const ROWS_SIZE: number = 15;
 const COLS_SIZE: number = 15;
