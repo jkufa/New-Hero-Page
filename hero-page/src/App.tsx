@@ -13,7 +13,8 @@ function App() {
   const [bouncingFirstName, setFirstNameBounce] = useState<boolean>(false);
   const [bouncingLastName, setLastNameBounce] = useState<boolean>(false);
   const [bgText, setBgText] = useState<string>(defaultBg);
-  const value = { bgText, setBgText };
+  const [fade, setFade] = useState<boolean>(true);
+  const value = { fade, setFade, bgText, setBgText };
 
   return (
     <div className="App">
