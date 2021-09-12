@@ -1,4 +1,4 @@
-import React, { FC, useContext, useEffect, useState } from 'react';
+import React, { FC, useContext } from 'react';
 import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
 
