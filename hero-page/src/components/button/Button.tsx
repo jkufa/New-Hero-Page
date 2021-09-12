@@ -8,23 +8,31 @@ interface Props {
 }
 
 const Button: FC<Props> = (Props) => {
-  const  { setBgText } = useContext(BackgroundContext);
+  const  { setFade, setBgText } = useContext(BackgroundContext);
   // Build bg text
   return (
     <div className={`${styles.btn_container}`}>
       <button 
         type="button" 
         className={`${styles.btn}`}
+        onFocusCapture = { () => { 
+          setFade(true);
+          setBgText(Props.text);
+        }}
         onMouseEnter = { () => { 
+          setFade(true);
           setBgText(Props.text);
         }}
         onTouchStartCapture = { () => { 
+          setFade(true);
           setBgText(Props.text);
         }}
         onMouseLeave = { () => { 
+            setFade(true);
             setBgText(Props.defaultBg);
         }}
         onTouchEndCapture={ () => {
+          setFade(true);
           setBgText(Props.defaultBg);
         }}
         >

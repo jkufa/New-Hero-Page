@@ -1,32 +1,31 @@
-import React, { FC, useContext, useState } from 'react';
+import React, { FC, useContext, useEffect, useState } from 'react';
 import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
 
-const ROWS_SIZE: number = 15;
-const COLS_SIZE: number = 15;
-const STR_LEN: number = 8;
+const ROW_SIZE: number = 17;
+const COL_SIZE: number = 18;
 
 interface Props {
   bgText: string;
 }
 
+// TODO: Find a way to delay text transform
 const Background: FC<Props> = () => {
-  const  { bgText } = useContext(BackgroundContext);
-  const [fadingIn, setFadeIn] = useState<boolean>(true);
-
-  let hasTransitioned: boolean = false;
+  const  { fade, setFade, bgText } = useContext(BackgroundContext);
+  const rows = Array(ROW_SIZE).fill(Array(COL_SIZE).fill(bgText + " "));
+  
   let i: number = 0;
+
   // Build bg text
-  const rows = Array(ROWS_SIZE).fill(Array(COLS_SIZE).fill(bgText + " "));
   return (
-    <div className={`${fadingIn ? styles.fadeInBg : ''} ${styles.bg}`}
-         onAnimationEnd={() => setFadeIn(() => false)}
+    <div className={`${fade ? styles.fadeInBg : ''} ${styles.bg}`}
+         onAnimationEnd={() => setFade(false)}
     >
       {
         rows.map((cols) => {
           i = 1 - i;
           return (
-          <div className={`${!hasTransitioned ? styles.has_transitioned : styles.has_not_transitioned } ${styles.marquee_container}`}>
+          <div className={`${styles.marquee_container}`}>
             <h1 className={`${styles.marquee}`}>
               <span className={`${i ? styles.rtl : styles.ltr}`}>{ cols }</span> 
             </h1>
