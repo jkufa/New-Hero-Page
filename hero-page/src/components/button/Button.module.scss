@@ -25,11 +25,15 @@
       font-size: $desktop-btn-size;
       width: $btn-width-desktop;
       border-radius: 50px;
-  }
+    }
 
-  &:focus {
-    outline: $light-primary solid;
-  }
+    &:focus {
+      outline: $light-primary solid;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &:hover,&:active,&:focus   {
       background-color: darken($light-primary, 20%);

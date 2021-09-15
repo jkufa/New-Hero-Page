@@ -3,12 +3,12 @@ import Background from './components/background/Background';
 import Button from './components/button/Button';
 import ProfessionalTitle from './components/professional-title/ProfessionalTitle';
 import BackgroundContext from './contexts/BackgroundTextContext';
+import Window from './components/window/Window';
 import './styles/App.scss';
 
 
 function App() {
   const defaultBg: string = 'jackkufa';
-
   const [fadingIn, setFadeIn] = useState<boolean>(true);
   const [bouncingFirstName, setFirstNameBounce] = useState<boolean>(false);
   const [bouncingLastName, setLastNameBounce] = useState<boolean>(false);

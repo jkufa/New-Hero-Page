@@ -18,7 +18,7 @@ const Button: FC<Props> = (Props) => {
   if(showWindow) {
     return (
      <WindowXButtonContext.Provider value={ value } >
-        <Window></Window>
+        <Window title={ Props.text.toUpperCase() }></Window>
      </WindowXButtonContext.Provider>
     ) 
   }

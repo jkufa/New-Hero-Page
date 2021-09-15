@@ -6,7 +6,6 @@ interface Props {
 }
 
 const ProfessionalTitle: FC<Props> = (Props) => {
-  // Build bg text
   return (
     <div className={`${styles.txt_container}`}>
       <p className={`${styles.txt}`}>
