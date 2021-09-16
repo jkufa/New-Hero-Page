@@ -1,0 +1,36 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/animations';
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+  button.btn {
+    margin-top: 1rem;
+    margin-left: auto; 
+    margin-right: 1rem;
+    direction: rtl;
+    color: $dark-primary;
+    font-size: $mobile-btn-size;
+    font-weight: 900;
+    background-color: $light-primary;
+    width: 2.25em;
+    height:2.25em;
+    border-radius: 50px;
+    border: .2em solid $dark-primary;
+    filter: drop-shadow(0 .3em 0 $dark-primary);
+    transform: translate(0, 0);
+    transition: all 350ms 150ms;
+    &:focus {
+      outline: $light-primary solid;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    }
+  
+      &:hover,&:active,&:focus   {
+        background-color: darken($light-primary, 20%);
+        filter: drop-shadow(0 .1em 0 $dark-primary);
+        transform: translate(0, .2em);
+        transition: all 300ms;
+      }
+}

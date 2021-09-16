@@ -12,7 +12,7 @@ const Window: FC<Props> = (Props) => {
   const [dragging, setDragging] = useState<boolean>(false);
   const [zIndex, setZIndex] = useState<number>(5);
 
-  const { toggleWindow } = useContext(WindowXButtonContext);
+  const { setRenderWindow } = useContext(WindowXButtonContext);
   const [fadeOut, setFadeOut] = useState<boolean>(false)
 
   const genRandomLeftTop = () => {
@@ -77,7 +77,7 @@ const Window: FC<Props> = (Props) => {
           onClick={ () => {
             setFadeOut(true);
             setTimeout(() => {
-              toggleWindow(false);
+              setRenderWindow(false);
             }, 250);
           }}
           >

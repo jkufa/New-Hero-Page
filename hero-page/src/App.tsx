@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import Background from './components/background/Background';
-import Button from './components/button/Button';
 import ProfessionalTitle from './components/professional-title/ProfessionalTitle';
 import BackgroundContext from './contexts/BackgroundTextContext';
-import Window from './components/window/Window';
 import './styles/App.scss';
+import ButtonWindow from './components/button-window/ButtonWindow';
 
 
 function App() {
@@ -56,11 +55,11 @@ function App() {
         </div>
       </div>
       <div className="btns-container">
-        <Button defaultBg = { defaultBg } text={"skills"}></Button>
-        <Button defaultBg = { defaultBg } text={"experience"}></Button>
-        <Button defaultBg = { defaultBg } text={"projects"}></Button>
-        <Button defaultBg = { defaultBg } text={"about"}></Button>
-        <Button defaultBg = { defaultBg } text={"resume"}></Button>
+        <ButtonWindow defaultBg = { defaultBg } title= {"skills"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"experience"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"projects"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"about"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"resume"}></ButtonWindow>
       </div>
       </div>
       <div className="bg-container">

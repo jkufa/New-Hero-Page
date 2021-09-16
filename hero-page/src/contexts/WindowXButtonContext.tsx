@@ -1,13 +1,13 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 
 interface Context {
-  showWindow: boolean;
-  toggleWindow(show: boolean): void;
+  renderWindow: boolean;
+  setRenderWindow(show: boolean): void;
 }
 
 const WindowXButtonContext = createContext<Context>({
-  showWindow: false,
-  toggleWindow: () => {},
+  renderWindow: false,
+  setRenderWindow: () => {},
 });
 
 export default WindowXButtonContext;

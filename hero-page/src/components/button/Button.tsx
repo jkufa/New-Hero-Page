@@ -21,14 +21,14 @@ const Button: FC<Props> = (Props) => {
       setTransition(false);
     }, 500);
     return (
-     <WindowXButtonContext.Provider value={ value } >
+    //  <WindowXButtonContext.Provider value={ value } >
         <Window title={ Props.text.toUpperCase() }></Window>
-     </WindowXButtonContext.Provider>
+    //  </WindowXButtonContext.Provider>
     ) 
   }
   else {
   return (
-    <WindowXButtonContext.Provider value={ value } >
+    // <WindowXButtonContext.Provider value={ value } >
       <div className={`${styles.btn_container}`}>
         <button 
           type="button" 
@@ -63,7 +63,7 @@ const Button: FC<Props> = (Props) => {
           { Props.text.toUpperCase() }
         </button> 
     </div>
-  </WindowXButtonContext.Provider>
+  // </WindowXButtonContext.Provider>
   );
   }
 }
