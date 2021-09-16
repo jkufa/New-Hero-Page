@@ -4,13 +4,24 @@
 @import '../../styles/abstracts/variables';
 
 .btn_container {
+  .transition {
+    @include transitionButton(25%,100%,20em,5em);
+    animation: transitionButton ease-in-out 300ms;
+  }
+
   width: 100vw;
   display: flex;
   justify-content: center;
+  margin-bottom: 0;
   padding: .5rem 0;
+  height: 2.25em;
+  font-size: $mobile-btn-size;
+  @include desktop {
+    font-size: $desktop-btn-size;
+  }
   button.btn {
-    color: $dark-primary;
     font-size: $mobile-btn-size;
+    color: $dark-primary;
     font-weight: 900;
     background-color: $light-primary;
     width: 95vw;

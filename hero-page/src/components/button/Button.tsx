@@ -13,9 +13,13 @@ interface Props {
 const Button: FC<Props> = (Props) => {
   const { setFade, setBgText } = useContext(BackgroundContext);
   const [showWindow, toggleWindow] = useState<boolean>(false);
+  const [transition, setTransition] = useState<boolean>(false);
   const value = {showWindow, toggleWindow};
 
   if(showWindow) {
+    setTimeout(() => {
+      setTransition(false);
+    }, 500);
     return (
      <WindowXButtonContext.Provider value={ value } >
         <Window title={ Props.text.toUpperCase() }></Window>
@@ -28,7 +32,7 @@ const Button: FC<Props> = (Props) => {
       <div className={`${styles.btn_container}`}>
         <button 
           type="button" 
-          className={`${styles.btn}`}
+          className={`${styles.btn} ${transition ? styles.transition : ''} `}
           onFocusCapture = { () => { 
             setFade(true);
             setBgText(Props.text);
@@ -50,7 +54,10 @@ const Button: FC<Props> = (Props) => {
             setBgText(Props.defaultBg);
           }}
           onClick={ () => {
-            toggleWindow(true);
+            setTransition(true);
+            setTimeout(() => {
+              toggleWindow(true);
+            }, 300);
           }}
           >
           { Props.text.toUpperCase() }

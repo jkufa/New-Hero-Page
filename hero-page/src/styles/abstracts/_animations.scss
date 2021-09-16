@@ -63,6 +63,39 @@ $translate-y-80: .015em;
   }
 }
 
+@mixin fadeOut($name, $x, $y) {
+  @keyframes #{$name} {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: translate($x, $y);
+      transform: translate($x, $y);
+      opacity: 0;
+    }
+  }
+}
+
+@mixin transitionButton($x, $y, $w, $h) {
+  @keyframes transitionButton {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0, -$y);
+      transform: translate(0, -$y);
+      width: $w;
+      height: $h;
+      // opacity: 0;
+    }
+  }
+}
+
 @keyframes press-down {
   0% {
     -webkit-transform: translate(0, 0);

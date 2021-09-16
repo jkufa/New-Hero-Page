@@ -4,6 +4,14 @@
 @import '../../styles/abstracts/variables';
 
 
+.fadeOut {
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+  // @include fadeOut(fade-out,0,0);
+  // animation: 1000ms fade-out;
+}
+
+
 .sendFront {
   z-index: 5;
 }
@@ -47,10 +55,8 @@
   }
 }
 
-$randomLeft: random(100);
-$randomTop: random(100);
-
 .window_container {
+  z-index: 3;
   position: absolute;
   -webkit-touch-callout: none;
   -webkit-user-select: none;

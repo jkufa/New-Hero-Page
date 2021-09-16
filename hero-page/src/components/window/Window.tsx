@@ -2,24 +2,6 @@ import { FC, useContext, useState } from 'react';
 import WindowXButtonContext from '../../contexts/WindowXButtonContext';
 import styles from './Window.module.scss';
 
-
-const XButton: FC = () => {
-  const { toggleWindow } = useContext(WindowXButtonContext);
-  
-  return (
-      <div className={`${styles.xbtn_container}`}>
-        <button 
-          className={`${styles.btn}`}
-          onClick={ () => {
-            toggleWindow(false);
-          }}
-          >
-          X
-          </button>
-        </div>
-    );
-}
-
 interface Props {
   title: string;
 }
@@ -29,6 +11,9 @@ const Window: FC<Props> = (Props) => {
   const [positionY, setPositionY] = useState<number>(0);
   const [dragging, setDragging] = useState<boolean>(false);
   const [zIndex, setZIndex] = useState<number>(5);
+
+  const { toggleWindow } = useContext(WindowXButtonContext);
+  const [fadeOut, setFadeOut] = useState<boolean>(false)
 
   const genRandomLeftTop = () => {
     let top = Math.random() * 90;
@@ -45,7 +30,7 @@ const Window: FC<Props> = (Props) => {
     console.log('dragStart',zIndex);
     setPositionX(diffX);
     setPositionY(diffY);
-      setDragging(true);
+    setDragging(true);
   }
 
   const drag = (event: React.MouseEvent<HTMLElement>) => {
@@ -74,7 +59,7 @@ const Window: FC<Props> = (Props) => {
 
 
   return (
-    <div className={`${styles.window_container}`}
+    <div className={`${styles.window_container} ${fadeOut ? styles.fadeOut: ''}`}
       style={ posStyles }
       onMouseDown={ dragStart } 
       onMouseMove={ drag }
@@ -85,7 +70,20 @@ const Window: FC<Props> = (Props) => {
       >
         <div className={`${styles.row}`}>
         <h2>{ Props.title }</h2>
-        <XButton></XButton>
+        {/* BUTTON */}
+        <div className={`${styles.xbtn_container}`}>
+        <button 
+          className={`${styles.btn}`}
+          onClick={ () => {
+            setFadeOut(true);
+            setTimeout(() => {
+              toggleWindow(false);
+            }, 250);
+          }}
+          >
+          X
+          </button>
+        </div>
         </div>
         <div className={`${styles.col}`}>
         <p>
