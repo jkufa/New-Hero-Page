@@ -3,6 +3,16 @@
 @import '../../styles/abstracts/mixins';
 @import '../../styles/abstracts/variables';
 
+.drag {
+  position: absolute;
+  z-index: 3;
+}
+
+.default {
+  transform: translate(0,0);
+  position: relative;
+}
+
 .btn_wndw_container {
   width: 100vw;
   display: flex;
@@ -26,6 +36,9 @@
     filter: drop-shadow(0 .3em 0 $dark-primary);
     transform: translate(0, 0);
     transition: all 350ms 150ms;
+    &:hover {
+      cursor: pointer;
+    }
 
     @include desktop {
       font-size: $desktop-btn-size;
@@ -36,9 +49,6 @@
   button.btn {
     &:focus {
       outline: $light-primary solid;
-    }
-    &:hover {
-      cursor: pointer;
     }
     &:hover,&:active,&:focus {
       background-color: darken($light-primary, 20%);

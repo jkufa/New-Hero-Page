@@ -11,7 +11,7 @@ const XButton = () => {
       onClick={ () => {
         setTimeout(() => {
           setRenderWindow(false);
-        }, 250);
+        }, 10);
       }}
       >
       X

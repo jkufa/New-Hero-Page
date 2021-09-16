@@ -1,4 +1,4 @@
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useCallback, useContext, useRef, useState } from "react";
 import BackgroundContext from '../../contexts/BackgroundTextContext';
 import WindowXButtonContext from "../../contexts/WindowXButtonContext";
 import XButton from "../x-button/XButton";
@@ -16,17 +16,43 @@ const ButtonWindow: FC<Props> = (Props,...children) => {
   
   // States for managing window
   const [renderWindow, setRenderWindow] = useState<boolean>(false);
-  const [positionX, setPositionX] = useState<number>(0);
-  const [positionY, setPositionY] = useState<number>(0);
-  const [dragging, setDragging] = useState<boolean>(false);
   const value = { renderWindow, setRenderWindow};
 
-  // console.log(Props.title,renderWindow);
+
+  const [position, setPosition] = useState({x: 0, y: 0});
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  const onMouseDown = useCallback(
+    (event) => {
+      const onMouseMove = (event: MouseEvent) => {
+        position.x += event.movementX;
+        position.y += event.movementY;
+        const element = elementRef.current;
+        if (element) {
+          element.style.transform = `translate(${position.x}px, ${position.y}px)`;
+        }
+        else { console.log(renderWindow)}
+        setPosition(position);
+      };
+      const onMouseUp = () => {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseup", onMouseUp);
+      };
+      document.addEventListener("mousemove", onMouseMove);
+      document.addEventListener("mouseup", onMouseUp);
+    },
+    [position, setPosition, elementRef]
+  );
 
   return (
     <WindowXButtonContext.Provider value={ value }>
       <div className={`${styles.btn_wndw_container}`}>
-          <button 
+        <div 
+            className={`${renderWindow ? styles.drag : ''}`}
+            ref= { elementRef }
+            onMouseDown={ onMouseDown } 
+        >
+          <button
             type="button" 
             className={`${ renderWindow ? styles.wndw : styles.btn} `}
             onFocusCapture = { () => { 
@@ -59,6 +85,7 @@ const ButtonWindow: FC<Props> = (Props,...children) => {
             }
             { renderWindow ? Props.content : '' }
           </button> 
+        </div>
       </div>
     </WindowXButtonContext.Provider>
   );
