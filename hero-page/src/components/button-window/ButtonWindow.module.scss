@@ -3,16 +3,6 @@
 @import '../../styles/abstracts/mixins';
 @import '../../styles/abstracts/variables';
 
-.drag {
-  position: absolute;
-  z-index: 3;
-}
-
-.default {
-  transform: translate(0,0);
-  position: relative;
-}
-
 .btn_wndw_container {
   width: 100vw;
   display: flex;
@@ -23,58 +13,5 @@
   font-size: $mobile-btn-size;
   @include desktop {
     font-size: $desktop-btn-size;
-  }
-  button.wndw,button.btn {
-    font-size: $mobile-btn-size;
-    color: $dark-primary;
-    font-weight: 900;
-    background-color: $light-primary;
-    width: 95vw;
-    height:2.25em;
-    border-radius: 25px;
-    border: .2em solid $dark-primary;
-    filter: drop-shadow(0 .3em 0 $dark-primary);
-    transform: translate(0, 0);
-    transition: all 350ms 150ms;
-    &:hover {
-      cursor: pointer;
-    }
-
-    @include desktop {
-      font-size: $desktop-btn-size;
-      width: $btn-width-desktop;
-      border-radius: 50px;
-    }
-  }
-  button.btn {
-    &:focus {
-      outline: $light-primary solid;
-    }
-    &:hover,&:active,&:focus {
-      background-color: darken($light-primary, 20%);
-      filter: drop-shadow(0 .1em 0 $dark-primary);
-      transform: translate(0, .2em);
-      transition: all 300ms;
-    }
-  }
-  button.wndw {
-    font-size: $mobile-btn-size;
-    color: $dark-primary;
-    font-weight: 900;
-    background-color: $light-primary;
-    width: 95vw;
-    height:2.25em;
-    border-radius: 25px;
-    border: .2em solid $dark-primary;
-    filter: drop-shadow(0 .3em 0 $dark-primary);
-    transform: translate(0, 0);
-    transition: all 350ms 150ms;
-
-    @include desktop {
-      font-size: $desktop-btn-size;
-      width: CALC($btn-width-desktop * 2);
-      height: 4em;
-      border-radius: 50px;
-    }
   }
 }
