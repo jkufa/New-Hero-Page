@@ -3,6 +3,11 @@
 @import '../styles/abstracts/mixins';
 @import '../styles/abstracts/variables';
 
+body {
+  overflow: hidden;
+
+}
+
 .App {
   min-height: 100vh;
   .content-container {

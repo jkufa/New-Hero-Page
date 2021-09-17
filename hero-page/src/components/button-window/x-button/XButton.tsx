@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import WindowXButtonContext from '../../contexts/WindowXButtonContext';
+import WindowXButtonContext from '../../../contexts/WindowXButtonContext';
 import styles from './XButton.module.scss';
 
 const XButton = () => {

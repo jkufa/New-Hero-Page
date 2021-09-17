@@ -1,7 +1,5 @@
-import React, { FC, useCallback, useContext, useRef, useState } from "react";
-import BackgroundContext from '../../contexts/BackgroundTextContext';
+import React, { FC, useState } from "react";
 import WindowXButtonContext from "../../contexts/WindowXButtonContext";
-import XButton from "../x-button/XButton";
 import Button from "./button/Button";
 import Window from "./window/Window";
 import styles from './ButtonWindow.module.scss';
@@ -21,7 +19,7 @@ const ButtonWindow: FC<Props> = (Props,...children) => {
   return (
     <WindowXButtonContext.Provider value={ value }>
       <div className={`${styles.btn_wndw_container}`}>
-          {renderWindow ? <Window title={ Props.title }></Window> : <Button title={ Props.title } defaultBg = { Props.defaultBg } ></Button> }
+          {renderWindow ? <Window title={ Props.title.toUpperCase() }></Window> : <Button title={ Props.title } defaultBg = { Props.defaultBg } ></Button> }
         </div>
     </WindowXButtonContext.Provider>
   );

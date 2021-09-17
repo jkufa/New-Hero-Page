@@ -1,13 +1,11 @@
-@import '../../styles/abstracts/colors';
-@import '../../styles/abstracts/animations';
-@import '../../styles/abstracts/mixins';
-@import '../../styles/abstracts/variables';
+@import '../../../styles/abstracts/colors';
+@import '../../../styles/abstracts/animations';
+@import '../../../styles/abstracts/mixins';
+@import '../../../styles/abstracts/variables';
 
   button.btn {
-    margin-top: 1rem;
     margin-left: auto; 
     margin-right: 1rem;
-    direction: rtl;
     color: $dark-primary;
     font-size: $mobile-btn-size;
     font-weight: 900;

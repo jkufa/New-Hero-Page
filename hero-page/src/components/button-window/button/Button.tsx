@@ -1,6 +1,5 @@
-import { FC, useContext, useState } from 'react';
+import { FC, useContext } from 'react';
 import styles from './Button.module.scss';
-import Window from '../window/Window';
 import WindowXButtonContext from '../../../contexts/WindowXButtonContext';
 import BackgroundTextContext from '../../../contexts/BackgroundTextContext';
 

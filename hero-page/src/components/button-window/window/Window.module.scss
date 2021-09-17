@@ -3,23 +3,56 @@
 @import '../../../styles/abstracts/mixins';
 @import '../../../styles/abstracts/variables';
 
-div.wndw {
+.drag {
+  z-index: 3;
+}
+
+.grow {
+  @include grow-window($btn-width-mobile,2.25em);
+  animation: grow-window ease-out 300ms;
+  @include desktop {
+    @include grow-window($btn-width-desktop * 2,2.25em);
+  }
+}
+
+div.window {
   font-size: $mobile-btn-size;
   color: $dark-primary;
   font-weight: 900;
   background-color: $light-primary;
-  width: 95vw;
-  height:2.25em;
+  min-width: $btn-width-mobile;
+  height:2.25em*5;
   border-radius: 25px;
   border: .2em solid $dark-primary;
   filter: drop-shadow(0 .3em 0 $dark-primary);
   transform: translate(0, 0);
   transition: all 350ms 150ms;
+  transform: translateY(-25%);
 
   @include desktop {
     font-size: $desktop-btn-size;
-    width: CALC($btn-width-desktop * 2);
-    height: 4em;
+    min-width: CALC($btn-width-desktop * 2);
     border-radius: 50px;
   }
+
+  .header {
+    display: flex;
+    margin-top: 1rem;
+    .title {
+      align-self: center;
+      margin-left:1rem;
+    }
+  }
+  
 }
+
+// @keyframes grow-window {
+//   0% {
+//     min-width: $btn-width-desktop;
+//     height: 2.25em;
+//   }
+//   100% {
+//     min-width: $btn-width-desktop * 2;
+//     height: 2.25em * 2;
+//   }
+// }
