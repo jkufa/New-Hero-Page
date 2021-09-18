@@ -3,6 +3,11 @@
 @import '../styles/abstracts/mixins';
 @import '../styles/abstracts/variables';
 
+body {
+  overflow: hidden;
+
+}
+
 .App {
   min-height: 100vh;
   .content-container {
@@ -153,6 +158,10 @@
         transform: translate($desktop-xl-translate-x, 0);
       }
     }
+  }
+
+  .btns-container {
+    height: 400px;
   }
   
   .bg-container {

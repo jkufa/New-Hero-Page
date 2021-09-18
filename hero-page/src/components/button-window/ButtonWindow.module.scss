@@ -1,0 +1,17 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/animations';
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+.btn_wndw_container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: .5rem 0;
+  height: 2.25em;
+  font-size: $mobile-btn-size;
+  @include desktop {
+    font-size: $desktop-btn-size;
+  }
+}

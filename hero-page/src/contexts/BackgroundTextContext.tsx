@@ -11,7 +11,7 @@ const BackgroundTextContext = createContext<bgCtxt>({
   fade: true,
   bgText: 'jackkufa',
   setBgText: () => { },
-  setFade: () => { }
+  setFade: () => { },
 });
 
 export default BackgroundTextContext;
