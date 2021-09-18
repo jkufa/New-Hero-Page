@@ -8,10 +8,14 @@
 }
 
 .grow {
-  @include grow-window($btn-width-mobile,2.25em);
-  animation: grow-window ease-out 300ms;
+  &.window {
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+  @include grow-window($btn-width-mobile,1,2.25em,4);
+  animation: grow-window ease-out 350ms;
   @include desktop {
-    @include grow-window($btn-width-desktop * 2,2.25em);
+    @include grow-window($btn-width-desktop,3,2.25em,4);
   }
 }
 
@@ -20,8 +24,8 @@ div.window {
   color: $dark-primary;
   font-weight: 900;
   background-color: $light-primary;
-  min-width: $btn-width-mobile;
-  height:2.25em*5;
+  width: $btn-width-mobile;
+  height:2.25em*4;
   border-radius: 25px;
   border: .2em solid $dark-primary;
   filter: drop-shadow(0 .3em 0 $dark-primary);
@@ -31,7 +35,7 @@ div.window {
 
   @include desktop {
     font-size: $desktop-btn-size;
-    min-width: CALC($btn-width-desktop * 2);
+    width: $btn-width-desktop * 3;
     border-radius: 50px;
   }
 
@@ -43,16 +47,4 @@ div.window {
       margin-left:1rem;
     }
   }
-  
 }
-
-// @keyframes grow-window {
-//   0% {
-//     min-width: $btn-width-desktop;
-//     height: 2.25em;
-//   }
-//   100% {
-//     min-width: $btn-width-desktop * 2;
-//     height: 2.25em * 2;
-//   }
-// }

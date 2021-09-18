@@ -92,15 +92,15 @@ $translate-y-80: .015em;
 }
 
 
-@mixin grow-window($w, $h) {
+@mixin grow-window($w, $x, $h, $y) {
   @keyframes grow-window {
     0% {
-      min-width: $w;
+      width: $w;
       height: $h;
     }
     100% {
-      min-width: $w;
-      height: $h * 5;
+      width: $w * $x;
+      height: $h * $y;
       transform: translateY(-25%);
     }
   }

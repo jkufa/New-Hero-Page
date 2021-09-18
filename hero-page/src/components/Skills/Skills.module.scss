@@ -1,0 +1,12 @@
+@import '../../styles/abstracts/colors';
+@import '../../styles/abstracts/animations';
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+.skills_container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 29em;
+}

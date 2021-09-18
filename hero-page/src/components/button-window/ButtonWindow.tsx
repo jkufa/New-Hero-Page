@@ -19,7 +19,12 @@ const ButtonWindow: FC<Props> = (Props,...children) => {
   return (
     <WindowXButtonContext.Provider value={ value }>
       <div className={`${styles.btn_wndw_container}`}>
-          {renderWindow ? <Window title={ Props.title.toUpperCase() }></Window> : <Button title={ Props.title } defaultBg = { Props.defaultBg } ></Button> }
+          {
+            renderWindow ? 
+            <Window title={ Props.title.toUpperCase() }>
+            { Props.children }
+            </Window> : 
+            <Button title={ Props.title } defaultBg = { Props.defaultBg } ></Button> }
         </div>
     </WindowXButtonContext.Provider>
   );

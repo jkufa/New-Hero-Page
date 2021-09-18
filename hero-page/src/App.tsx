@@ -4,6 +4,7 @@ import ProfessionalTitle from './components/professional-title/ProfessionalTitle
 import BackgroundContext from './contexts/BackgroundTextContext';
 import './styles/App.scss';
 import ButtonWindow from './components/button-window/ButtonWindow';
+import Skills from './components/Skills/Skills';
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
   const [bgText, setBgText] = useState<string>(defaultBg);
   const [fade, setFade] = useState<boolean>(true);
   const value = { fade, setFade, bgText, setBgText };
+
+  const skills = ["Typescript", "Javascript", "React", "Python", "C#", "HTML5/CSS","SCSS/LESS",".NET","Flask","Linux","Git","Storybook","Postman","Jira"];
 
   return (
     <div className="App">
@@ -55,7 +58,9 @@ function App() {
         </div>
       </div>
       <div className="btns-container">
-        <ButtonWindow defaultBg = { defaultBg } title= {"skills"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"skills"}>
+          <Skills skills={skills}/>
+        </ButtonWindow>
         <ButtonWindow defaultBg = { defaultBg } title= {"experience"}></ButtonWindow>
         <ButtonWindow defaultBg = { defaultBg } title= {"projects"}></ButtonWindow>
         <ButtonWindow defaultBg = { defaultBg } title= {"about"}></ButtonWindow>
