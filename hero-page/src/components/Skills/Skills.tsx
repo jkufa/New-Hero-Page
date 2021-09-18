@@ -19,4 +19,3 @@ const Skills: FC<Props> = (Props) => {
 }
 
 export default Skills;
-// rows.map((cols) => {

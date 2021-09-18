@@ -12,10 +12,10 @@
     overflow: hidden;
     overflow-x: hidden;
   }
-  @include grow-window($btn-width-mobile,1,2.25em,4);
+  @include grow-window($btn-width-mobile,1,2.25em,5.95);
   animation: grow-window ease-out 350ms;
   @include desktop {
-    @include grow-window($btn-width-desktop,3,2.25em,4);
+    @include grow-window($btn-width-desktop,3,2.25em,3.92);
   }
 }
 
@@ -25,7 +25,6 @@ div.window {
   font-weight: 900;
   background-color: $light-primary;
   width: $btn-width-mobile;
-  height:2.25em*4;
   border-radius: 25px;
   border: .2em solid $dark-primary;
   filter: drop-shadow(0 .3em 0 $dark-primary);

@@ -8,5 +8,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 29em;
+  
+  @include desktop {
+    width: 29em;
+  }
 }
