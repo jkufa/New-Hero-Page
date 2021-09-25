@@ -7,8 +7,9 @@
   padding: .2em;
   display: flex;
   .skill {
+    font-size: 1.75rem; // change this, make special vars
     padding: .3em;
-    font-size: $mobile-btn-size / 1.5; // change this, make special vars
+    font-weight: 900;
     width: 6.5em;
     border-radius: 4em;
     background-color: darken($light-primary, 8%);

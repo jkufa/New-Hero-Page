@@ -47,7 +47,7 @@ const Window: FC<Props> = (Props) => {
           <div className={styles.title}>{Props.title}</div>
           <XButton></XButton>
         </div>
-        { Props.children }
+        <div className={styles.content_container}>{ Props.children }</div>
       </div>
     </div>
     );

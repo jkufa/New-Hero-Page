@@ -4,12 +4,11 @@
 @import '../../styles/abstracts/variables';
 
 .skills_container {
-  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   
   @include desktop {
-    width: 29em;
+    width: 40em;
   }
 }
