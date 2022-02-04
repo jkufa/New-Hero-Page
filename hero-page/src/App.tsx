@@ -57,7 +57,7 @@ function App() {
           <ProfessionalTitle text={'Front-End Software Engineer'} ></ProfessionalTitle>
         </div>
       </div>
-      <div className="btns-container">
+      <div>
         <ButtonWindow defaultBg = { defaultBg } title= {"skills"}>
           <Skills skills={skills}/>
         </ButtonWindow>

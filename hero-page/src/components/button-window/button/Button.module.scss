@@ -9,7 +9,7 @@
     font-weight: 900;
     background-color: $light-primary;
     width: 95vw;
-    height:2.25em;
+    height: 2.25em;
     border-radius: 25px;
     border: .2em solid $dark-primary;
     filter: drop-shadow(0 .3em 0 $dark-primary);
@@ -31,8 +31,8 @@
     }
 
     &:hover,&:active,&:focus   {
-      background-color: darken($light-primary, 20%);
-      filter: drop-shadow(0 .1em 0 $dark-primary);
+      background-color: darken($light-primary, 15%);
+      filter: drop-shadow(0 .1em 0 $dark-primary) hue-rotate(25deg);
       transform: translate(0, .2em);
       transition: all 300ms;
     }
