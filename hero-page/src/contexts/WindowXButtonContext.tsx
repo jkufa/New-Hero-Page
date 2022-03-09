@@ -7,7 +7,7 @@ interface Context {
 
 const WindowXButtonContext = createContext<Context>({
   renderWindow: false,
-  setRenderWindow: () => {},
+  setRenderWindow: () => { null },
 });
 
 export default WindowXButtonContext;

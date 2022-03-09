@@ -8,7 +8,7 @@ import Skills from './components/skills/Skills';
 
 
 function App() {
-  const defaultBg: string = 'jackkufa';
+  const defaultBg = "jackkufa";
   const [fadingIn, setFadeIn] = useState<boolean>(true);
   const [bouncingFirstName, setFirstNameBounce] = useState<boolean>(false);
   const [bouncingLastName, setLastNameBounce] = useState<boolean>(false);

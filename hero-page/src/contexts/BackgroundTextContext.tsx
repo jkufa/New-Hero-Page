@@ -10,8 +10,8 @@ interface bgCtxt {
 const BackgroundTextContext = createContext<bgCtxt>({
   fade: true,
   bgText: 'jackkufa',
-  setBgText: () => { },
-  setFade: () => { },
+  setBgText: () => { null },
+  setFade: () => { null },
 });
 
 export default BackgroundTextContext;
