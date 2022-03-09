@@ -11,6 +11,7 @@ const Window: FC<Props> = (Props) => {
   const [position, setPosition] = useState({x: 0, y: 0});
   const [grow, setGrow] = useState<boolean>(true);
   const elementRef = useRef<HTMLDivElement>(null);
+  const isMac:boolean = navigator.userAgent.includes("Macintosh") ? true : false;
 
 
   const onMouseDown = useCallback(
@@ -44,10 +45,11 @@ const Window: FC<Props> = (Props) => {
            onAnimationEnd={() => setGrow(() => false)}
            >
         <div className={styles.header}>
+          {isMac && <XButton isMac = { isMac }></XButton>}
           <div className={styles.title}>{Props.title}</div>
-          <XButton></XButton>
+          {!isMac && <XButton  isMac = { isMac }></XButton>}
         </div>
-        { Props.children }
+        <div className={styles.content_container}>{ Props.children }</div>
       </div>
     </div>
     );

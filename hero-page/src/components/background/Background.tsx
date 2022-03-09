@@ -2,8 +2,8 @@ import React, { FC, useContext } from 'react';
 import BackgroundContext from '../../contexts/BackgroundTextContext';
 import styles from './Background.module.scss';
 
-const ROW_SIZE: number = 17;
-const COL_SIZE: number = 18;
+const ROW_SIZE = 17;
+const COL_SIZE = 18;
 
 interface Props {
   bgText: string;
@@ -14,7 +14,7 @@ const Background: FC<Props> = () => {
   const  { fade, setFade, bgText } = useContext(BackgroundContext);
   const rows = Array(ROW_SIZE).fill(Array(COL_SIZE).fill(bgText + " "));
   
-  let i: number = 0;
+  let i = 0;
 
   // Build bg text
   return (

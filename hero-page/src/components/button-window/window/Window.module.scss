@@ -12,10 +12,10 @@
     overflow: hidden;
     overflow-x: hidden;
   }
+  animation: grow-window cubic-bezier(0.42, 0.72, 0.3, 1) 400ms;
   @include grow-window($btn-width-mobile,1,2.25em,5.95);
-  animation: grow-window ease-out 350ms;
   @include desktop {
-    @include grow-window($btn-width-desktop,3,2.25em,3.92);
+    @include grow-window($btn-width-desktop,3,2.25em,3.7);
   }
 }
 
@@ -45,5 +45,11 @@ div.window {
       align-self: center;
       margin-left:1rem;
     }
+  }
+
+  .content_container {
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 1rem;
   }
 }

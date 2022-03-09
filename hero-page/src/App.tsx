@@ -4,11 +4,11 @@ import ProfessionalTitle from './components/professional-title/ProfessionalTitle
 import BackgroundContext from './contexts/BackgroundTextContext';
 import './styles/App.scss';
 import ButtonWindow from './components/button-window/ButtonWindow';
-import Skills from './components/Skills/Skills';
+import Skills from './components/skills/Skills';
 
 
 function App() {
-  const defaultBg: string = 'jackkufa';
+  const defaultBg = "jackkufa";
   const [fadingIn, setFadeIn] = useState<boolean>(true);
   const [bouncingFirstName, setFirstNameBounce] = useState<boolean>(false);
   const [bouncingLastName, setLastNameBounce] = useState<boolean>(false);
@@ -57,14 +57,21 @@ function App() {
           <ProfessionalTitle text={'Front-End Software Engineer'} ></ProfessionalTitle>
         </div>
       </div>
-      <div className="btns-container">
+      <div>
         <ButtonWindow defaultBg = { defaultBg } title= {"skills"}>
           <Skills skills={skills}/>
         </ButtonWindow>
-        <ButtonWindow defaultBg = { defaultBg } title= {"experience"}></ButtonWindow>
-        <ButtonWindow defaultBg = { defaultBg } title= {"projects"}></ButtonWindow>
-        <ButtonWindow defaultBg = { defaultBg } title= {"about"}></ButtonWindow>
-        <ButtonWindow defaultBg = { defaultBg } title= {"resume"}></ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"experience"}>
+        </ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"projects"}>
+          Drafty Top Track Tweeter
+        </ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"about"}>
+          I am cool
+        </ButtonWindow>
+        <ButtonWindow defaultBg = { defaultBg } title= {"resume"}>
+          Rezzy
+        </ButtonWindow>
       </div>
       </div>
       <div className="bg-container">
